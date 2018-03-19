@@ -1,0 +1,252 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2018933100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url \u0027http://localhost:3030\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027http://localhost:3030\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "Products are returned on GET",
+        "description": "",
+        "id": "verify-that-products-are-properly-returned-by-the-api;products-are-returned-on-get",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12267800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "path \u0027products\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027products\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8857310700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1596200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 102327700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url \u0027http://localhost:3030\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027http://localhost:3030\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 12,
+            "value": "#existing content of products.feature"
+          }
+        ],
+        "line": 14,
+        "name": "Specific product has minimum required data to be displayed",
+        "description": "",
+        "id": "verify-that-products-are-properly-returned-by-the-api;specific-product-has-minimum-required-data-to-be-displayed",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21229400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "path \u0027products/9132294\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027products/9132294\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 69843500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 97300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19430800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "match $ contains { price: #notnull, description: #notnull, image: #notnull  }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "$",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " { price: #notnull, description: #notnull, image: #notnull  }",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 648400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "match $.categories contains { id: #notnull, name: #notnull, createdAt: #notnull, updatedAt: #notnull }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "$.categories",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " { id: #notnull, name: #notnull, createdAt: #notnull, updatedAt: #notnull }",
+                  "offset": 27
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify that products are properly returned by the API",
+    "description": "",
+    "id": "verify-that-products-are-properly-returned-by-the-api",
+    "keyword": "Feature",
+    "uri": "features/products/products.feature"
+  }
+]

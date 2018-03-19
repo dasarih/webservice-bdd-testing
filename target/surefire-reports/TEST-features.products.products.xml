@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="Verify that products are properly returned by the API" skipped="0" tests="2" time="11.103685">
+<testcase classname="features.products.products" name="Products are returned on GET" time="10.890108">
+<system-out><![CDATA[* url 'http://localhost:3030'...............................................passed
+Given path 'products'.......................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="features.products.products" name="Specific product has minimum required data to be displayed" time="0.213577">
+<system-out><![CDATA[* url 'http://localhost:3030'...............................................passed
+Given path 'products/9132294'...............................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+And match $ contains { price: #notnull, description: #notnull, image: #notnull  }.passed
+And match $.categories contains { id: #notnull, name: #notnull, createdAt: #notnull, updatedAt: #notnull }.passed
+]]></system-out>
+</testcase>
+</testsuite>
